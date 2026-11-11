@@ -24,6 +24,7 @@
   .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; padding:0; list-style:none; margin:0; }
   .features li { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
   .features b { display:block; margin-bottom:2px; }
+  .features li.star { border-color:var(--accent); }
   .features span { color:var(--soft); font-size:.95em; }
   .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:24px 16px; align-items:start; }
   figure { margin:0; }
@@ -53,6 +54,7 @@
 
   <h2>Tính năng</h2>
   <ul class="features">
+    <li class="star"><b>★ Hán Việt ngược</b><span>Đọc báo tiếng Việt cũng học được chữ Hán: từ Hán Việt (kinh tế, văn hoá, ngân hàng…) được gạch chân, rê chuột để xem 经济, 文化, 银行… Từ đã lưu có thể hiện bằng chữ Hán ngay trong bài.</span></li>
     <li><b>Rê chuột để tra từ</b><span>Pinyin tô màu theo thanh điệu, nghĩa tiếng Việt và tiếng Anh, tự nhận diện từ dài nhất (研究生, 学习…).</span></li>
     <li><b>Âm Hán Việt đúng theo cách đọc</b><span>好 hǎo → hảo, hào → hiếu; 行 háng → hàng, xíng → hành.</span></li>
     <li><b>Phát âm</b><span>Dùng giọng đọc tiếng Trung của máy, chỉnh được giọng và tốc độ.</span></li>
@@ -65,6 +67,8 @@
 
   <h2>Hình ảnh</h2>
   <div class="shots">
+    <figure><div class="frame"><img src="img/hv-reverse.png" alt="Trang báo tiếng Việt: từ kinh tế được gạch chân, popup hiện chữ Hán 经济" loading="lazy" /></div><figcaption>Hán Việt ngược: rê chuột lên "kinh tế" trên báo tiếng Việt</figcaption></figure>
+    <figure><div class="frame"><img src="img/hv-swap.png" alt="Từ đã lưu kinh tế được hiển thị bằng chữ Hán 经济 trong bài báo" loading="lazy" /></div><figcaption>Từ đã lưu hiện bằng chữ Hán ngay trong bài</figcaption></figure>
     <figure><div class="frame"><img src="img/hover.png" alt="Popup tra từ 研究生 với pinyin, Hán Việt và nghĩa" loading="lazy" /></div><figcaption>Rê chuột lên chữ Hán để tra từ</figcaption></figure>
     <figure><div class="frame"><img src="img/translate.png" alt="Popup dịch câu tiếng Trung sang tiếng Việt và tiếng Anh" loading="lazy" /></div><figcaption>Bôi đen câu để dịch</figcaption></figure>
     <figure><div class="frame"><img src="img/chars.png" alt="Thứ tự nét và bộ thủ của chữ 说" loading="lazy" /></div><figcaption>Thứ tự nét, bộ thủ, cấu tạo chữ</figcaption></figure>
