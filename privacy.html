@@ -29,7 +29,7 @@
 
 <h2>Tóm tắt</h2>
 <ul>
-  <li>Chúng tôi <strong>không có máy chủ</strong> và <strong>không thu thập</strong> dữ liệu của bạn.</li>
+  <li>Chúng tôi <strong>không có máy chủ</strong>. Không có dữ liệu nào của bạn được gửi về cho chúng tôi.</li>
   <li>Từ điển chạy hoàn toàn trên máy. Văn bản trên trang web chỉ được đọc tại chỗ để tra từ và <strong>không được gửi đi đâu</strong>.</li>
   <li>Wordbook lưu trên trình duyệt. Nếu bạn đăng nhập Google, Wordbook được đồng bộ vào <strong>Google Drive của chính bạn</strong>.</li>
   <li>Chúng tôi không bán, không chia sẻ dữ liệu và không dùng dữ liệu để quảng cáo.</li>
@@ -43,9 +43,13 @@
 <h2>Dịch câu (Google Translate)</h2>
 <p>Khi bạn bấm nút dịch (译), chọn "Dịch" ở menu chuột phải, nhập vào ô dịch, hoặc bấm "Dịch" ở câu ví dụ, đoạn văn bản đó được gửi tới Google Translate để lấy bản dịch. Việc này tuân theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>. Không có văn bản nào được gửi đi nếu bạn không yêu cầu dịch.</p>
 
+<h2>Phát âm</h2>
+<p>Extension dùng giọng đọc có sẵn của trình duyệt và hệ điều hành. Nếu bạn chọn một giọng đọc trực tuyến (ví dụ các giọng có chữ "Online" trên Microsoft Edge), từ hoặc câu cần đọc sẽ được gửi tới dịch vụ đọc của nhà cung cấp trình duyệt (Microsoft hoặc Google) để tạo âm thanh.</p>
+
 <h2>Dữ liệu được lưu ở đâu</h2>
 <ul>
-  <li><strong>Trên máy của bạn:</strong> Wordbook (từ, nghĩa, ghi chú, tag, câu ví dụ, URL nguồn) và cài đặt được lưu trong bộ nhớ của extension (<code>chrome.storage</code>).</li>
+  <li><strong>Trên máy của bạn:</strong> Wordbook (từ, nghĩa, ghi chú, tag, câu ví dụ, URL nguồn) được lưu trong bộ nhớ của extension (<code>chrome.storage.local</code>).</li>
+  <li><strong>Cài đặt</strong> (chế độ tra từ, ngôn ngữ nghĩa, giọng đọc, tên deck Anki…) được lưu bằng <code>chrome.storage.sync</code>. Nếu bạn bật đồng bộ của trình duyệt, cài đặt được đồng bộ qua tài khoản Google/Microsoft đang đăng nhập trình duyệt. Cài đặt không chứa Wordbook hay nội dung trang web.</li>
   <li><strong>Trên Google Drive của bạn</strong> (chỉ khi bạn đăng nhập): Wordbook được lưu thành file <code>vocab.json</code> trong thư mục <em>appDataFolder</em>. Đây là thư mục ẩn trong Drive của bạn, chỉ extension này đọc được.</li>
   <li><strong>Anki</strong> (chỉ khi bạn bấm "→ Anki"): từ vựng được gửi tới add-on AnkiConnect chạy trên chính máy của bạn (<code>127.0.0.1</code>).</li>
 </ul>
@@ -86,7 +90,7 @@
 
 <h2>Summary</h2>
 <ul>
-  <li>We run <strong>no servers</strong> and <strong>collect no data</strong> about you.</li>
+  <li>We run <strong>no servers</strong>. None of your data is ever sent to us.</li>
   <li>The dictionary runs entirely on your device. Page text is read locally for lookups and is <strong>never sent anywhere</strong>.</li>
   <li>Your Wordbook is stored in your browser and, if you sign in with Google, synced to <strong>your own Google Drive</strong>.</li>
   <li>We do not sell or share your data, and we do not use it for advertising.</li>
@@ -100,9 +104,13 @@
 <h2>Sentence translation (Google Translate)</h2>
 <p>When you click the translate button (译), choose "Translate" in the context menu, type in the translate box, or click "Dịch" on an example sentence, that text is sent to Google Translate to get a translation. This is subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. No text is sent unless you request a translation.</p>
 
+<h2>Pronunciation</h2>
+<p>The extension uses the text-to-speech voices provided by your browser and operating system. If you choose an online voice (for example the "Online" voices in Microsoft Edge), the word or sentence being read is sent to the browser vendor's speech service (Microsoft or Google) to generate the audio.</p>
+
 <h2>Where your data is stored</h2>
 <ul>
-  <li><strong>On your device:</strong> your Wordbook (words, meanings, notes, tags, example sentences, source URLs) and settings are kept in the extension's storage (<code>chrome.storage</code>).</li>
+  <li><strong>On your device:</strong> your Wordbook (words, meanings, notes, tags, example sentences, source URLs) is kept in the extension's storage (<code>chrome.storage.local</code>).</li>
+  <li><strong>Settings</strong> (lookup mode, meaning language, voice, Anki deck name…) are stored with <code>chrome.storage.sync</code>. If browser sync is turned on, they sync through the Google/Microsoft account signed in to the browser. Settings contain no Wordbook data or web page content.</li>
   <li><strong>In your Google Drive</strong> (only when signed in): the Wordbook is stored as <code>vocab.json</code> in the <em>appDataFolder</em>, a hidden folder in your own Drive that only this extension can access.</li>
   <li><strong>Anki</strong> (only when you click "→ Anki"): words are sent to the AnkiConnect add-on running on your own computer (<code>127.0.0.1</code>).</li>
 </ul>
