@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chinese Learner – Học tiếng Trung</title>
+<meta name="description" content="Extension Chrome/Edge: rê chuột tra từ tiếng Trung, pinyin, âm Hán Việt, nghĩa Việt/Anh, Wordbook đồng bộ Google Drive, thứ tự nét, dịch câu, xuất Anki." />
+<link rel="icon" href="img/icon.png" />
+<style>
+  :root { --bg:#fff; --card:#f6f7f9; --text:#1f2328; --soft:#5b6470; --line:#e3e5e8; --accent:#d93025; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17191d; --card:#20232a; --text:#e6e8eb; --soft:#a3abb5; --line:#30353c; --accent:#ff6b5f; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:48px 16px 32px; }
+  header { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  header img { width:72px; height:72px; border-radius:16px; }
+  h1 { font-size:2em; line-height:1.2; margin:0; }
+  .lead { color:var(--soft); margin:4px 0 0; font-size:1.1em; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:28px 0 8px; }
+  .btn { display:inline-block; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid var(--line); color:var(--text); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .btn.disabled { opacity:.55; pointer-events:none; }
+  h2 { font-size:1.3em; margin:48px 0 16px; }
+  .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; padding:0; list-style:none; margin:0; }
+  .features li { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .features b { display:block; margin-bottom:2px; }
+  .features span { color:var(--soft); font-size:.95em; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:24px 16px; align-items:start; }
+  figure { margin:0; }
+  .frame { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff; }
+  .frame img { display:block; width:100%; height:auto; }
+  figcaption { color:var(--soft); font-size:.9em; margin-top:6px; }
+  .note { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--soft); }
+  footer { max-width:960px; margin:0 auto; padding:24px 16px 48px; border-top:1px solid var(--line); color:var(--soft); font-size:.9em; display:flex; gap:16px; flex-wrap:wrap; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/icon.png" alt="" />
+    <div>
+      <h1>Chinese Learner</h1>
+      <p class="lead">Học tiếng Trung ngay trên trang web bạn đang đọc. Extension cho Chrome và Microsoft Edge.</p>
+    </div>
+  </header>
+
+  <!-- Sau khi store duyệt: thay href="#" bằng link store và bỏ class "disabled". -->
+  <div class="cta">
+    <a class="btn primary disabled" id="chrome-link" href="#">Cài từ Chrome Web Store (sắp có)</a>
+    <a class="btn disabled" id="edge-link" href="#">Cài từ Edge Add-ons (sắp có)</a>
+  </div>
+
+  <h2>Tính năng</h2>
+  <ul class="features">
+    <li><b>Rê chuột để tra từ</b><span>Pinyin tô màu theo thanh điệu, nghĩa tiếng Việt và tiếng Anh, tự nhận diện từ dài nhất (研究生, 学习…).</span></li>
+    <li><b>Âm Hán Việt đúng theo cách đọc</b><span>好 hǎo → hảo, hào → hiếu; 行 háng → hàng, xíng → hành.</span></li>
+    <li><b>Phát âm</b><span>Dùng giọng đọc tiếng Trung của máy, chỉnh được giọng và tốc độ.</span></li>
+    <li><b>Wordbook</b><span>Lưu từ kèm câu ví dụ, ghi chú, tag. Đăng nhập Google để đồng bộ giữa các máy qua Google Drive của bạn.</span></li>
+    <li><b>Thứ tự nét và bộ thủ</b><span>Animation nét, tập viết, bộ Khang Hy, số nét, cấu tạo và nguồn gốc chữ.</span></li>
+    <li><b>Dịch câu nhanh</b><span>Bôi đen để dịch Trung ⇄ Việt/Anh kèm pinyin, hoặc gõ vào ô dịch trên thanh công cụ.</span></li>
+    <li><b>Xuất sang Anki</b><span>File CSV hoặc gửi thẳng qua AnkiConnect, bỏ qua từ đã có.</span></li>
+    <li><b>Chạy offline</b><span>Từ điển 130.000+ mục nằm sẵn trong extension. Chỉ dịch câu và đồng bộ mới cần mạng.</span></li>
+  </ul>
+
+  <h2>Hình ảnh</h2>
+  <div class="shots">
+    <figure><div class="frame"><img src="img/hover.png" alt="Popup tra từ 研究生 với pinyin, Hán Việt và nghĩa" loading="lazy" /></div><figcaption>Rê chuột lên chữ Hán để tra từ</figcaption></figure>
+    <figure><div class="frame"><img src="img/translate.png" alt="Popup dịch câu tiếng Trung sang tiếng Việt và tiếng Anh" loading="lazy" /></div><figcaption>Bôi đen câu để dịch</figcaption></figure>
+    <figure><div class="frame"><img src="img/chars.png" alt="Thứ tự nét và bộ thủ của chữ 说" loading="lazy" /></div><figcaption>Thứ tự nét, bộ thủ, cấu tạo chữ</figcaption></figure>
+    <figure><div class="frame"><img src="img/wordbook.png" alt="Wordbook với từ đã lưu và câu ví dụ" loading="lazy" /></div><figcaption>Wordbook kèm câu ví dụ</figcaption></figure>
+  </div>
+
+  <h2>Quyền riêng tư</h2>
+  <p class="note">Không có máy chủ, không thu thập dữ liệu. Nội dung trang web chỉ được tra trên máy bạn. Văn bản chỉ được gửi tới Google Translate khi bạn yêu cầu dịch. Wordbook đồng bộ vào thư mục ẩn trên Google Drive <em>của chính bạn</em>. Xem <a href="privacy.html">Chính sách quyền riêng tư</a>.</p>
+</main>
+<footer>
+  <a href="privacy.html">Chính sách quyền riêng tư / Privacy Policy</a>
+  <a href="mailto:linhnv.haui@gmail.com">Liên hệ</a>
+  <span>Dữ liệu: CC-CEDICT, CVDICT (CC BY-SA 4.0), hanviet-pinyin-wordlist (MIT), Unihan, Make Me a Hanzi, hanzi-writer-data (Arphic Public License).</span>
+</footer>
+</body>
+</html>

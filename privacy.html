@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chính sách quyền riêng tư – Chinese Learner</title>
+<link rel="icon" href="img/icon.png" />
+<style>
+  :root { --bg:#fff; --text:#1f2328; --soft:#5b6470; --line:#e3e5e8; --accent:#d93025; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17191d; --text:#e6e8eb; --soft:#a3abb5; --line:#30353c; --accent:#ff6b5f; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.8em; line-height:1.25; margin:0 0 4px; }
+  h2 { font-size:1.2em; margin:2em 0 .4em; }
+  .muted { color:var(--soft); }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:48px 0; }
+  code { font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+<p><a href="./">← Chinese Learner</a> · <a href="#en">English</a></p>
+
+<h1>Chính sách quyền riêng tư</h1>
+<p class="muted">Cập nhật lần cuối: 11/11/2026</p>
+
+<p>Chinese Learner là extension cho Chrome và Microsoft Edge, giúp học tiếng Trung trên các trang web. Chính sách này giải thích extension xử lý dữ liệu của bạn như thế nào.</p>
+
+<h2>Tóm tắt</h2>
+<ul>
+  <li>Chúng tôi <strong>không có máy chủ</strong> và <strong>không thu thập</strong> dữ liệu của bạn.</li>
+  <li>Từ điển chạy hoàn toàn trên máy. Văn bản trên trang web chỉ được đọc tại chỗ để tra từ và <strong>không được gửi đi đâu</strong>.</li>
+  <li>Wordbook lưu trên trình duyệt. Nếu bạn đăng nhập Google, Wordbook được đồng bộ vào <strong>Google Drive của chính bạn</strong>.</li>
+  <li>Chúng tôi không bán, không chia sẻ dữ liệu và không dùng dữ liệu để quảng cáo.</li>
+</ul>
+
+<h2>Nội dung trang web</h2>
+<p>Để tra từ khi bạn rê chuột hoặc bôi đen, extension đọc vài ký tự quanh vị trí con trỏ trên trang đang mở. Việc tra cứu dùng từ điển đóng gói sẵn trong extension, xử lý hoàn toàn trên máy của bạn. Extension không lưu lịch sử duyệt web và không gửi nội dung trang tới bất kỳ đâu.</p>
+<p>Khi bạn bấm ☆ để lưu một từ, extension lưu kèm câu chứa từ đó và địa chỉ (URL) của trang để làm ví dụ. Dữ liệu này nằm trong Wordbook của bạn.</p>
+
+<h2>Dịch câu (Google Translate)</h2>
+<p>Khi bạn bấm nút dịch (译), chọn "Dịch" ở menu chuột phải, nhập vào ô dịch, hoặc bấm "Dịch" ở câu ví dụ, đoạn văn bản đó được gửi tới Google Translate (<code>translate.googleapis.com</code>) để lấy bản dịch. Việc này tuân theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>. Không có văn bản nào được gửi đi nếu bạn không yêu cầu dịch.</p>
+
+<h2>Dữ liệu được lưu ở đâu</h2>
+<ul>
+  <li><strong>Trên máy của bạn:</strong> Wordbook (từ, nghĩa, ghi chú, tag, câu ví dụ, URL nguồn) và cài đặt được lưu trong bộ nhớ của extension (<code>chrome.storage</code>).</li>
+  <li><strong>Trên Google Drive của bạn</strong> (chỉ khi bạn đăng nhập): Wordbook được lưu thành file <code>vocab.json</code> trong thư mục <em>appDataFolder</em>. Đây là thư mục ẩn trong Drive của bạn, chỉ extension này đọc được.</li>
+  <li><strong>Anki</strong> (chỉ khi bạn bấm "→ Anki"): từ vựng được gửi tới add-on AnkiConnect chạy trên chính máy của bạn (<code>127.0.0.1</code>).</li>
+</ul>
+
+<h2>Thông tin tài khoản Google</h2>
+<p>Khi bạn đăng nhập, extension yêu cầu các quyền sau:</p>
+<ul>
+  <li><code>openid</code>, <code>email</code>, <code>profile</code>: để hiển thị tên, email và ảnh đại diện của bạn trong trang Cài đặt.</li>
+  <li><code>https://www.googleapis.com/auth/drive.appdata</code>: để lưu và đọc Wordbook trong thư mục ẩn của extension. Quyền này <strong>không</strong> cho phép xem hay sửa các file khác trong Drive của bạn.</li>
+</ul>
+<p>Mã truy cập (access token) chỉ được giữ trong bộ nhớ tạm của trình duyệt (<code>chrome.storage.session</code>). Mã này không được ghi xuống đĩa và không được gửi tới bên nào khác ngoài Google.</p>
+
+<h2>Tuân thủ chính sách dữ liệu người dùng của Google</h2>
+<p>Việc Chinese Learner sử dụng và chuyển giao thông tin nhận được từ Google API tuân thủ <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, bao gồm các yêu cầu về Limited Use.</p>
+
+<h2>Xóa dữ liệu</h2>
+<ul>
+  <li>Xóa một từ trong Wordbook thì từ đó bị xóa trên máy và trên Drive ở lần đồng bộ kế tiếp.</li>
+  <li>Gỡ extension thì dữ liệu trên máy bị xóa.</li>
+  <li>Để xóa dữ liệu trên Drive và thu hồi quyền:
+    <ol>
+      <li>Vào drive.google.com → Cài đặt → Quản lý ứng dụng, chọn Chinese Learner → Xóa dữ liệu ứng dụng ẩn.</li>
+      <li>Vào <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> để gỡ quyền truy cập.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2>Liên hệ</h2>
+<p>Mọi câu hỏi về quyền riêng tư, vui lòng gửi email tới <a href="mailto:linhnv.haui@gmail.com">Email: linhnv.haui@gmail.com</a>.</p>
+
+<hr />
+
+<section id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="muted">Last updated: November 11, 2026</p>
+
+<p>Chinese Learner is a Chrome and Microsoft Edge extension for learning Chinese while browsing. This policy explains how the extension handles your data.</p>
+
+<h2>Summary</h2>
+<ul>
+  <li>We run <strong>no servers</strong> and <strong>collect no data</strong> about you.</li>
+  <li>The dictionary runs entirely on your device. Page text is read locally for lookups and is <strong>never sent anywhere</strong>.</li>
+  <li>Your Wordbook is stored in your browser and, if you sign in with Google, synced to <strong>your own Google Drive</strong>.</li>
+  <li>We do not sell or share your data, and we do not use it for advertising.</li>
+</ul>
+
+<h2>Web page content</h2>
+<p>To look up words when you hover or select text, the extension reads a few characters around the pointer on the current page. Lookups use a dictionary bundled with the extension and happen entirely on your device. The extension does not record your browsing history and does not send page content anywhere.</p>
+<p>When you save a word (☆), the sentence containing it and the page URL are stored with it as an example, in your Wordbook.</p>
+
+<h2>Sentence translation (Google Translate)</h2>
+<p>When you click the translate button (译), choose "Translate" in the context menu, type in the translate box, or click "Dịch" on an example sentence, that text is sent to Google Translate (<code>translate.googleapis.com</code>) to get a translation. This is subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. No text is sent unless you request a translation.</p>
+
+<h2>Where your data is stored</h2>
+<ul>
+  <li><strong>On your device:</strong> your Wordbook (words, meanings, notes, tags, example sentences, source URLs) and settings are kept in the extension's storage (<code>chrome.storage</code>).</li>
+  <li><strong>In your Google Drive</strong> (only when signed in): the Wordbook is stored as <code>vocab.json</code> in the <em>appDataFolder</em>, a hidden folder in your own Drive that only this extension can access.</li>
+  <li><strong>Anki</strong> (only when you click "→ Anki"): words are sent to the AnkiConnect add-on running on your own computer (<code>127.0.0.1</code>).</li>
+</ul>
+
+<h2>Google account information</h2>
+<p>When you sign in, the extension requests:</p>
+<ul>
+  <li><code>openid</code>, <code>email</code>, <code>profile</code>: to show your name, email and avatar on the Settings page.</li>
+  <li><code>https://www.googleapis.com/auth/drive.appdata</code>: to store and read your Wordbook in the extension's hidden app-data folder. This scope does <strong>not</strong> allow access to any other files in your Drive.</li>
+</ul>
+<p>Access tokens are held only in the browser's in-memory session storage (<code>chrome.storage.session</code>). They are never written to disk or sent anywhere other than Google.</p>
+
+<h2>Google API Services User Data Policy</h2>
+<p>Chinese Learner's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Deleting your data</h2>
+<ul>
+  <li>Deleting a word from the Wordbook removes it from your device, and from Drive at the next sync.</li>
+  <li>Uninstalling the extension removes the data stored on your device.</li>
+  <li>To remove the Drive data and revoke access:
+    <ol>
+      <li>Go to drive.google.com → Settings → Manage apps, choose Chinese Learner → Delete hidden app data.</li>
+      <li>Remove access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2>Contact</h2>
+<p>For privacy questions, email <a href="mailto:linhnv.haui@gmail.com">linhnv.haui@gmail.com</a>.</p>
+</section>
+</main>
+</body>
+</html>
